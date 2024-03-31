@@ -13,6 +13,7 @@ aws_access_key_id = AKIxxxxxxxxxxxxxxxx
 aws_secret_access_key = 7U6c3hxxxxxxxxxxxx
 
 create s3 bucket in aws account for terraform status file:
+
 mybucketterraform2024
 
 
