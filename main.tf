@@ -48,6 +48,10 @@ module "aws_alb_controller" {
   ]
 }
 
+################################################################################
+# create a AWS NLB for nginx accessing
+################################################################################
+
 resource "kubernetes_service" "nginx_service" {
   metadata {
     name = "nginx-service"
@@ -74,6 +78,10 @@ resource "kubernetes_service" "nginx_service" {
     module.eks, module.aws_alb_controller
   ]
 }
+
+################################################################################
+# launch backend nginx pod in eks
+################################################################################
 
 resource "kubernetes_pod" "nginx_pod" {
   metadata {
