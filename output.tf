@@ -41,6 +41,10 @@ output "private_subnets" {
   value       = module.vpc.private_subnets
 }
 
+################################################################################
+# print the URL for nginx pod accessing
+################################################################################
+
 output "service_nlb_hostname" {
   description = "The hostname of the NLB of the nginx service"
   value       = kubernetes_service.nginx_service.status[0].load_balancer[0].ingress[0].hostname
